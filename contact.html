@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="shortcut icon" href="favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Hannibal Conseil</title>
+<meta name="description" content="Contactez Hannibal Conseil pour vos projets de signalisation ferroviaire. Réponse sous 24 à 48h ouvrées.">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── CONTACT ── */
+.contact-wrap { padding: 5rem 5rem; background: var(--white); }
+.contact-grid {
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 7rem;
+  max-width: 1100px; margin: 0 auto;
+}
+
+.form-title {
+  font-family: 'DM Serif Display', serif; font-size: 2rem;
+  color: var(--dark); margin-bottom: .5rem; letter-spacing: -.01em;
+}
+.form-sub { color: var(--muted); font-size: 14px; font-weight: 300; margin-bottom: 2.5rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.form-group { margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mid); }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--bg); border: none;
+  border-bottom: 1.5px solid var(--border);
+  padding: 12px 0; font-family: 'DM Sans', sans-serif;
+  font-size: 15px; font-weight: 300; color: var(--dark);
+  outline: none; width: 100%; transition: border-color .25s; appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-bottom-color: var(--green); }
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(106,106,106,.4); }
+.form-group textarea { resize: vertical; min-height: 130px; }
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231a6b3a' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 4px center;
+  background-color: var(--bg); padding-right: 32px; cursor: pointer;
+}
+.form-req { color: var(--green); }
+.btn-submit {
+  background: var(--dark); color: var(--white);
+  border: none; padding: 14px 40px;
+  font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  cursor: pointer; transition: background .2s, transform .2s; margin-top: .5rem;
+}
+.btn-submit:hover { background: var(--green); transform: translateY(-2px); }
+
+/* Infos côté droit */
+.info-title {
+  font-family: 'DM Serif Display', serif; font-size: 2rem;
+  color: var(--dark); margin-bottom: .5rem; letter-spacing: -.01em;
+}
+.info-sub { color: var(--muted); font-size: 14px; font-weight: 300; margin-bottom: 2.5rem; }
+.info-block { padding: 1.4rem 0; border-bottom: 1px solid var(--border); }
+.info-block:last-of-type { border-bottom: none; }
+.info-label { font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--green); margin-bottom: .5rem; }
+.info-block p { color: var(--muted); font-size: 15px; font-weight: 300; line-height: 1.85; }
+.info-block a { color: var(--dark); font-size: 15px; font-weight: 400; transition: color .2s; }
+.info-block a:hover { color: var(--green); }
+
+/* ════════════════════
+   RESPONSIVE CONTACT
+════════════════════ */
+@media (max-width: 1100px) {
+  .contact-wrap { padding: 4rem 3rem; }
+  .contact-grid { gap: 5rem; }
+}
+
+@media (max-width: 900px) {
+  .contact-wrap { padding: 3rem 2.5rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+}
+
+@media (max-width: 600px) {
+  .contact-wrap { padding: 2.5rem 1.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .btn-submit { width: 100%; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- BURGER OVERLAY -->
+<div class="nav-overlay" id="nav-overlay">
+  <a href="index.html">Accueil</a>
+  <a href="references.html">Références</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="nav-overlay-cta">Contactez-nous</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar" class="opaque">
+  <a href="index.html" class="nav-logo">
+    <svg viewBox="0 0 54 54" style="width:34px;height:34px;flex-shrink:0" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="6" width="8" height="2.5" rx="1" fill="#9a9896"/>
+      <rect x="6" y="8.5" width="4" height="37" fill="#787674"/>
+      <rect x="4" y="45.5" width="8" height="2.5" rx="1" fill="#9a9896"/>
+      <rect x="42" y="6" width="8" height="2.5" rx="1" fill="#9a9896"/>
+      <rect x="44" y="8.5" width="4" height="37" fill="#787674"/>
+      <rect x="42" y="45.5" width="8" height="2.5" rx="1" fill="#9a9896"/>
+      <rect x="2" y="12" width="50" height="3.5" rx="1" fill="#c8c6c2"/>
+      <rect x="2" y="38" width="50" height="3.5" rx="1" fill="#c8c6c2"/>
+      <rect x="14" y="7" width="7" height="40" rx="2" fill="#1a6b3a"/>
+      <rect x="33" y="7" width="7" height="40" rx="2" fill="#1a6b3a"/>
+      <rect x="14" y="22" width="26" height="10" rx="1.5" fill="#1a6b3a"/>
+      <rect x="14" y="7" width="2.5" height="40" rx="1" fill="white" opacity="0.18"/>
+      <rect x="33" y="7" width="2.5" height="40" rx="1" fill="white" opacity="0.18"/>
+    </svg>
+    <span class="nav-brand">Hannibal <em>Conseil</em></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="references.html">Références</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="contact.html" class="nav-cta">Contactez-nous</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1671695060824-3ff0fd2e7079?auto=format&fit=crop&w=1920')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">Parlons de votre projet</div>
+    <h1>Contactez-nous</h1>
+  </div>
+</div>
+
+<!-- FORMULAIRE + INFOS -->
+<section class="contact-wrap">
+  <div class="contact-grid">
+
+    <!-- Formulaire -->
+    <div class="reveal">
+      <div class="form-title">Envoyez votre demande</div>
+      <p class="form-sub">Nous vous répondrons dans les plus brefs délais.</p>
+      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/merci.html" id="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><input name="bot-field"></p>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nom et Prénom</label>
+            <input type="text" name="from_name" placeholder="Jean Dupont" required>
+          </div>
+          <div class="form-group">
+            <label>Entreprise</label>
+            <input type="text" name="company" placeholder="Votre société">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Adresse e-mail <span class="form-req">*</span></label>
+          <input type="email" name="reply_to" placeholder="votre@email.fr" required>
+        </div>
+        <div class="form-group">
+          <label>Votre demande concerne</label>
+          <select name="subject">
+            <option value="" disabled selected>Sélectionnez un sujet</option>
+            <option value="Une prestation d'essais">Une prestation d'essais</option>
+            <option value="Une prestation d'études">Une prestation d'études</option>
+            <option value="Une formation">Une formation</option>
+            <option value="Autre">Autre...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Votre message <span class="form-req">*</span></label>
+          <textarea name="message" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Envoyer votre demande</button>
+      </form>
+    </div>
+
+    <!-- Informations -->
+    <div class="reveal d1">
+      <div class="info-title">Informations</div>
+      <p class="info-sub">Nous sommes à votre disposition.</p>
+      <div class="info-block">
+        <div class="info-label">E-mail</div>
+        <a href="mailto:contact@hannibal-conseil.fr">contact@hannibal-conseil.fr</a>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Siège social</div>
+        <p>1 rue de Stockholm<br>75008 Paris</p>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Heures d'ouverture</div>
+        <p>Lun–Ven 8h–18h</p>
+      </div>
+      <div class="info-block">
+        <div class="info-label">LinkedIn</div>
+        <a href="https://www.linkedin.com/in/wisam-i-6a949890" target="_blank">Suivez-nous sur LinkedIn</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">
+        <svg viewBox="0 0 54 54" style="width:28px;height:28px" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="6" width="8" height="2.5" rx="1" fill="#9a9896"/>
+          <rect x="6" y="8.5" width="4" height="37" fill="#787674"/>
+          <rect x="4" y="45.5" width="8" height="2.5" rx="1" fill="#9a9896"/>
+          <rect x="42" y="6" width="8" height="2.5" rx="1" fill="#9a9896"/>
+          <rect x="44" y="8.5" width="4" height="37" fill="#787674"/>
+          <rect x="42" y="45.5" width="8" height="2.5" rx="1" fill="#9a9896"/>
+          <rect x="2" y="12" width="50" height="3.5" rx="1" fill="#c8c6c2"/>
+          <rect x="2" y="38" width="50" height="3.5" rx="1" fill="#c8c6c2"/>
+          <rect x="14" y="7" width="7" height="40" rx="2" fill="#1a6b3a"/>
+          <rect x="33" y="7" width="7" height="40" rx="2" fill="#1a6b3a"/>
+          <rect x="14" y="22" width="26" height="10" rx="1.5" fill="#1a6b3a"/>
+        </svg>
+        <span class="footer-name">Hannibal <em>Conseil</em></span>
+      </div>
+      <p class="footer-desc">Ingénierie spécialisée en signalisation ferroviaire, de la conception à la mise en service.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contact</div>
+      <p>1 rue de Stockholm<br>75008 Paris</p>
+      <a href="mailto:contact@hannibal-conseil.fr" style="margin-top:.6rem;display:block">contact@hannibal-conseil.fr</a>
+      <a href="https://www.linkedin.com/in/wisam-i-6a949890" target="_blank" style="margin-top:.4rem;display:block">LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Expertises</div>
+      <div class="footer-exp">
+        Signalisation ferroviaire<br>
+        Études d'exécution<br>
+        Essais &amp; validation<br>
+        Formation &amp; conseil<br>
+        Transports guidés
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Hannibal Conseil — Tous droits réservés</span>
+    <div class="footer-legal">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="privacy-policy.html">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('navbar');
+let lastY = 0;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  nav.style.transform = (y > lastY && y > 150) ? 'translateY(-100%)' : 'translateY(0)';
+  lastY = y;
+}, { passive: true });
+
+const burger  = document.getElementById('burger');
+const overlay = document.getElementById('nav-overlay');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  overlay.classList.toggle('open');
+  document.body.style.overflow = burger.classList.contains('open') ? 'hidden' : '';
+});
+overlay.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    burger.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
