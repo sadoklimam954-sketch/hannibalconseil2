@@ -76,7 +76,7 @@ nav.sticky, nav.opaque {
 .nav-logo:hover { opacity: .8; }
 .nav-brand { font-family: 'DM Serif Display', serif; font-size: 19px; color: var(--white); transition: color .4s; letter-spacing: .01em; }
 nav.sticky .nav-brand, nav.opaque .nav-brand { color: var(--dark); }
-.nav-brand em { color: var(--green); font-style: normal; }
+.nav-brand em { color: #6dd99a; font-style: normal; }
 
 .nav-links { display: flex; align-items: center; gap: 2.6rem; }
 .nav-links a {
@@ -141,7 +141,7 @@ nav.sticky .burger span, nav.opaque .burger span { background: var(--dark); }
 .nav-overlay.open a:nth-child(2) { transition-delay: .1s; }
 .nav-overlay.open a:nth-child(3) { transition-delay: .15s; }
 .nav-overlay.open a:nth-child(4) { transition-delay: .2s; }
-.nav-overlay a:hover { color: var(--green); }
+.nav-overlay a:hover { color: #6dd99a; }
 .nav-overlay .nav-overlay-cta {
   margin-top: 1rem;
   background: var(--green); color: var(--white) !important;
@@ -190,9 +190,9 @@ footer {
 }
 .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 1.2rem; }
 .footer-name { font-family: 'DM Serif Display', serif; font-size: 19px; color: var(--dark); }
-.footer-name em { color: var(--green); font-style: normal; }
+.footer-name em { color: #6dd99a; font-style: normal; }
 .footer-desc { color: var(--muted); font-size: 14px; font-weight: 300; line-height: 1.9; max-width: 300px; }
-.footer-col-title { font-size: 10px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--green); margin-bottom: 1.2rem; }
+.footer-col-title { font-size: 10px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: #6dd99a; margin-bottom: 1.2rem; }
 .footer-col p { color: var(--muted); font-size: 14px; font-weight: 300; line-height: 1.9; }
 .footer-col a { color: var(--muted); font-size: 14px; font-weight: 300; display: block; margin-bottom: 5px; transition: color .2s; }
 .footer-col a:hover { color: var(--dark); }
@@ -201,7 +201,7 @@ footer {
 .footer-copy { color: #b0b0a8; font-size: 13px; }
 .footer-legal { display: flex; gap: 1.5rem; }
 .footer-legal a { color: #b0b0a8; font-size: 13px; transition: color .2s; }
-.footer-legal a:hover { color: var(--green); }
+.footer-legal a:hover { color: #6dd99a; }
 
 /* ══════════════════════════════════════════
    SCRIPT COMMUN (inline JS à copier)
