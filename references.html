@@ -49,30 +49,16 @@
   font-size: clamp(1.4rem, 2vw, 2rem);
   color: var(--dark); margin-bottom: 2.5rem; letter-spacing: -.01em;
 }
-.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
 .gallery-item {
   position: relative; overflow: hidden;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   background: var(--dark);
-  border: 3px solid var(--green);
-  box-shadow: 0 2px 12px rgba(0,0,0,.18);
 }
-.gallery-item::before,
-/*.gallery-item::after {
-  content: ''; position: absolute; left: 0; right: 0; height: 18px;
-  z-index: 2; pointer-events: none;
-  background: repeating-linear-gradient(
-    to right,
-    var(--green) 0px, var(--dark) 8px,
-    #f5e9c8 8px, #f5e9c8 18px
-  );
-}*/
-.gallery-item::before { top: 0; }
-.gallery-item::after  { bottom: 0; }
 .gallery-item img {
   width: 100%; height: 100%; object-fit: cover; display: block;
-  transition: transform .5s ease, filter .3s; filter: grayscale(10%);
-  margin-top: 0;
+  transition: transform .5s ease;
+  filter: grayscale(15%);
 }
 .gallery-item:hover img { transform: scale(1.04); filter: grayscale(0); }
 
@@ -261,7 +247,7 @@
     <div class="gallery-item reveal d1"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/photo-metro-Awv4WNRja8SkbaOX.jpg" alt="Métro"></div>
     <div class="gallery-item reveal d2"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/metro-lyon-YKb3keQLEWC14Xv4.jpg" alt="Métro Lyon"></div>
     <div class="gallery-item reveal d3"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/schema-s-YleWxa8jgVi9E8l4.jpg" alt="Schéma"></div>
-    <div class="gallery-item reveal d1"><img src="ferro1.jpg" alt="Tramway"></div>
+    <div class="gallery-item reveal d1"><img src="fff.jpg" alt="Tramway"></div>
     <div class="gallery-item reveal d2"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/poste-marseille-1536x2048-dJoZk3M7qWTbp26X.jpg" alt="Poste Marseille"></div>
     <div class="gallery-item reveal d3"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/porte-paliere-YleWxa8jrBfVODqW.jpg" alt="Porte palière"></div>
   </div>
