@@ -49,18 +49,22 @@
   font-size: clamp(1.4rem, 2vw, 2rem);
   color: var(--dark); margin-bottom: 2.5rem; letter-spacing: -.01em;
 }
-.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.gallery-grid {
+  display: grid; grid-template-columns: repeat(3, 180px);
+  gap: 12px; justify-content: center;
+}
 .gallery-item {
-  position: relative; overflow: hidden;
-  aspect-ratio: 4 / 3;
-  background: var(--dark);
+  width: 180px; height: 120px;
+  border-radius: 8px;
+  overflow: hidden; background: var(--dark);
+  position: relative;
 }
 .gallery-item img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+  width: 180px; height: 120px; object-fit: cover; display: block;
   transition: transform .5s ease;
   filter: grayscale(15%);
 }
-.gallery-item:hover img { transform: scale(1.04); filter: grayscale(0); }
+.gallery-item:hover img { transform: scale(1.06); filter: grayscale(0); }
 
 /* ── CLIENTS ── */
 .clients { padding: 4rem 5rem; border-top: 1px solid var(--border); }
@@ -117,7 +121,7 @@
   .ref-col:last-child { border-bottom: none; }
 
   .gallery { padding: 0 2.5rem 3rem; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(3, 180px); }
 
   .clients { padding: 3rem 2.5rem; }
   .clients-grid { gap: 2.5rem; }
@@ -130,7 +134,9 @@
   .ref-col { padding: 2rem 1.5rem; }
 
   .gallery { padding: 0 1.5rem 2.5rem; }
-  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(3, 140px); }
+  .gallery-item { width: 140px; height: 93px; }
+  .gallery-item img { width: 140px; height: 93px; }
 
   .clients { padding: 2.5rem 1.5rem; }
   .clients-grid { gap: 2rem; }
