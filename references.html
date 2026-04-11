@@ -42,46 +42,93 @@
 .ref-list li:last-child { border-bottom: none; }
 .ref-list li::before { display: none; }
 
-/* ── GALERIE ── */
-.gallery { padding: 0 5rem 5rem; }
-.gallery h2 {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(1.4rem, 2vw, 2rem);
-  color: var(--dark); margin-bottom: 2.5rem; letter-spacing: -.01em;
+/* ── GALERIE 3 COLONNES ── */
+.galerie-section {
+  padding: 5rem;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
 }
+.galerie-section-header {
+  text-align: center; margin-bottom: 3.5rem;
+}
+.galerie-section-header h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  color: var(--dark); letter-spacing: -.02em;
+}
+.galerie-3col {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 1280px; margin: 0 auto;
+}
+.gcol-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.15rem; color: var(--dark);
+  margin-bottom: 1.4rem; letter-spacing: -.01em;
+}
+
+/* Carte France */
+.france-map-wrap {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 10px; padding: 1.5rem;
+  display: flex; flex-direction: column; align-items: center;
+}
+.france-map-wrap svg { width: 100%; max-width: 200px; height: auto; }
+
+/* Grille photos centre */
 .gallery-grid {
-  display: grid; grid-template-columns: repeat(3, 180px);
-  gap: 12px; justify-content: center;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 .gallery-item {
-  width: 180px; height: 120px;
-  border-radius: 8px;
-  overflow: hidden; background: var(--dark);
-  position: relative;
+  display: flex; flex-direction: column; gap: 5px;
 }
-.gallery-item img {
-  width: 180px; height: 120px; object-fit: cover; display: block;
-  transition: transform .5s ease;
-  filter: grayscale(15%);
+.gallery-item-img {
+  width: 100%; aspect-ratio: 3 / 2;
+  border-radius: 8px; overflow: hidden;
+  background: var(--dark); position: relative;
 }
-.gallery-item:hover img { transform: scale(1.06); filter: grayscale(0); }
+.gallery-item-img img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .5s ease; filter: grayscale(12%);
+}
+.gallery-item-img:hover img { transform: scale(1.06); filter: grayscale(0); }
+.gallery-item-caption {
+  font-size: 11px; font-weight: 500; color: var(--muted);
+  letter-spacing: .03em; text-align: center; line-height: 1.3;
+}
 
-/* ── CLIENTS ── */
-.clients { padding: 4rem 5rem; border-top: 1px solid var(--border); }
-.clients h2 {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(1.3rem, 2vw, 1.85rem);
-  color: var(--dark); margin-bottom: 3rem; letter-spacing: -.01em;
+/* Colonne droite */
+.clients-logos {
+  display: flex; flex-direction: column; gap: 8px; margin-bottom: 2rem;
 }
-.clients-grid {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 3.5rem;
+.client-logo-box {
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 10px 16px; background: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  height: 54px; transition: border-color .2s;
 }
-/*.clients-grid img {
-  filter: grayscale(100%);
-  transition: filter .3s, /*opacity .3s;*/;
-  /*height: 50px; width: auto; object-fit: contain; */
-
-.clients-grid img:hover { filter: grayscale(0); opacity: 1; }
+.client-logo-box:hover { border-color: rgba(26,107,58,.3); }
+.client-logo-box img {
+  max-height: 28px; width: auto; object-fit: contain;
+}
+.standards-label {
+  font-size: 10px; font-weight: 600; letter-spacing: .25em;
+  text-transform: uppercase; color: var(--green-acc); margin-bottom: .8rem;
+}
+.standards-list { list-style: none; }
+.standards-list li {
+  font-size: 13px; font-weight: 500; color: var(--muted);
+  padding: .5rem 0; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 8px;
+}
+.standards-list li:last-child { border-bottom: none; }
+.standards-list li::before {
+  content: ''; display: block; width: 5px; height: 5px;
+  background: var(--green-acc); border-radius: 50%; flex-shrink: 0;
+}
 
 /* ── CTA BANDE ── */
 .cta-band {
@@ -108,8 +155,7 @@
 ════════════════════════ */
 @media (max-width: 1100px) {
   .refs-body { padding: 4rem 3rem; }
-  .gallery { padding: 0 3rem 4rem; }
-  .clients { padding: 3.5rem 3rem; }
+  .galerie-section { padding: 4rem 3rem; }
   .cta-band { padding: 4rem 3rem; }
 }
 
@@ -119,29 +165,15 @@
   .refs-grid { grid-template-columns: 1fr; }
   .ref-col { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem; }
   .ref-col:last-child { border-bottom: none; }
-
-  .gallery { padding: 0 2.5rem 3rem; }
-  .gallery-grid { grid-template-columns: repeat(3, 180px); }
-
-  .clients { padding: 3rem 2.5rem; }
-  .clients-grid { gap: 2.5rem; }
-
+  .galerie-section { padding: 3.5rem 2.5rem; }
+  .galerie-3col { grid-template-columns: 1fr; }
   .cta-band { flex-direction: column; align-items: flex-start; padding: 3rem 2.5rem; }
 }
 
 @media (max-width: 600px) {
   .refs-body { padding: 2.5rem 1.5rem; }
   .ref-col { padding: 2rem 1.5rem; }
-
-  .gallery { padding: 0 1.5rem 2.5rem; }
-  .gallery-grid { grid-template-columns: repeat(3, 140px); }
-  .gallery-item { width: 140px; height: 93px; }
-  .gallery-item img { width: 140px; height: 93px; }
-
-  .clients { padding: 2.5rem 1.5rem; }
-  .clients-grid { gap: 2rem; }
-  .clients-grid img { height: 38px; }
-
+  .galerie-section { padding: 2.5rem 1.5rem; }
   .cta-band { padding: 2.5rem 1.5rem; }
   .btn-green { width: 100%; text-align: center; }
 }
@@ -246,28 +278,109 @@
   </div>
 </section>
 
-<!-- GALERIE PHOTOS -->
-<section class="gallery">
-  <h2 class="reveal">Quelques réalisations</h2>
-  <div class="gallery-grid">
-    <div class="gallery-item reveal d1"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/photo-metro-Awv4WNRja8SkbaOX.jpg" alt="Métro"></div>
-    <div class="gallery-item reveal d2"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/metro-lyon-YKb3keQLEWC14Xv4.jpg" alt="Métro Lyon"></div>
-    <div class="gallery-item reveal d3"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/schema-s-YleWxa8jgVi9E8l4.jpg" alt="Schéma"></div>
-    <div class="gallery-item reveal d1"><img src="fff.jpg" alt="Tramway"></div>
-    <div class="gallery-item reveal d2"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/poste-marseille-1536x2048-dJoZk3M7qWTbp26X.jpg" alt="Poste Marseille"></div>
-    <div class="gallery-item reveal d3"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/porte-paliere-YleWxa8jrBfVODqW.jpg" alt="Porte palière"></div>
+<!-- GALERIE 3 COLONNES -->
+<section class="galerie-section">
+  <div class="galerie-section-header reveal">
+    <div class="section-tag" style="justify-content:center">Terrain &amp; réseau</div>
+    <h2>Nos implantations, réalisations &amp; clients</h2>
   </div>
-</section>
 
-<!-- LOGOS CLIENTS -->
-<section class="clients">
-  <h2 class="reveal">Références clients</h2>
-  <div class="clients-grid">
-    <img class="reveal"    src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=144,h=96,fit=crop/YleW99z2ggsEE9o8/logo-equans-site-internet.jpg-AzGXwx74xWIJRMqd.webp" alt="Equans">
-    <img class="reveal d1" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=63,fit=crop/YleW99z2ggsEE9o8/logo_colas_rail_2018.svg-YNqBklPbk1tRWyNO.png" alt="Colas Rail">
-    <img class="reveal d2" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=53,fit=crop/YleW99z2ggsEE9o8/alstom_logo.svg-AE0PkNP9W4hgy1vb.png" alt="Alstom">
-    <img class="reveal d3" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=56,fit=crop/YleW99z2ggsEE9o8/images-2-YKb3kXlqresyaW8l.png" alt="Client">
-    <img class="reveal d1" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=76,fit=crop/YleW99z2ggsEE9o8/7457c5a1129a0451cafd2c8156e91b3fcfa4cd16-YD0lkqEL8BclR3Kb.png" alt="Client">
+  <div class="galerie-3col">
+
+    <!-- ── GAUCHE : carte France ── -->
+    <div class="reveal">
+      <div class="gcol-title">Nos implantations</div>
+      <div class="france-map-wrap">
+        <svg viewBox="0 0 190 215" xmlns="http://www.w3.org/2000/svg" aria-label="Carte France">
+          <!-- Contour France simplifié -->
+          <path d="M144,12 L168,45 L176,85 L165,115 L171,152 L148,186 L108,200 L68,194 L40,172 L25,142 L12,110 L14,72 L30,44 L62,24 L92,12 Z"
+            fill="#eef7f2" stroke="#c8e6d8" stroke-width="1.5"/>
+          <!-- Points villes -->
+          <!-- Paris -->
+          <circle cx="118" cy="72" r="5" fill="#e03030"/>
+          <text x="124" y="70" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Paris</text>
+          <!-- Lyon -->
+          <circle cx="148" cy="128" r="5" fill="#e03030"/>
+          <text x="154" y="126" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Lyon</text>
+          <!-- Marseille -->
+          <circle cx="148" cy="180" r="5" fill="#e03030"/>
+          <text x="115" y="188" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Marseille</text>
+          <!-- Bordeaux -->
+          <circle cx="63" cy="152" r="5" fill="#e03030"/>
+          <text x="18" y="150" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Bordeaux</text>
+          <!-- Toulouse -->
+          <circle cx="98" cy="174" r="5" fill="#e03030"/>
+          <text x="104" y="172" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Toulouse</text>
+          <!-- Angers -->
+          <circle cx="68" cy="95" r="5" fill="#e03030"/>
+          <text x="74" y="93" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Angers</text>
+          <!-- Brest -->
+          <circle cx="22" cy="73" r="5" fill="#e03030"/>
+          <text x="28" y="71" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Brest</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- ── CENTRE : grille photos ── -->
+    <div class="reveal d1">
+      <div class="gcol-title">Quelques réalisations</div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-item-img"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/photo-metro-Awv4WNRja8SkbaOX.jpg" alt="Métro Paris"></div>
+          <span class="gallery-item-caption">Métro Paris</span>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-item-img"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/metro-lyon-YKb3keQLEWC14Xv4.jpg" alt="Métro Lyon"></div>
+          <span class="gallery-item-caption">Métro Lyon</span>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-item-img"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/schema-s-YleWxa8jgVi9E8l4.jpg" alt="Schéma signalisation"></div>
+          <span class="gallery-item-caption">Schéma signalisation</span>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-item-img"><img src="fff.jpg" alt="Tramway"></div>
+          <span class="gallery-item-caption">Tramway</span>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-item-img"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/poste-marseille-1536x2048-dJoZk3M7qWTbp26X.jpg" alt="Poste Marseille"></div>
+          <span class="gallery-item-caption">Poste Marseille</span>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-item-img"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=220,fit=crop/YleW99z2ggsEE9o8/porte-paliere-YleWxa8jrBfVODqW.jpg" alt="Portes palières L14"></div>
+          <span class="gallery-item-caption">Portes palières L14</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── DROITE : logos + normes ── -->
+    <div class="reveal d2">
+      <div class="gcol-title">Nos clients</div>
+      <div class="clients-logos">
+        <div class="client-logo-box">
+          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=63,fit=crop/YleW99z2ggsEE9o8/logo-equans-site-internet.jpg-AzGXwx74xWIJRMqd.webp" alt="Equans">
+        </div>
+        <div class="client-logo-box">
+          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=63,fit=crop/YleW99z2ggsEE9o8/logo_colas_rail_2018.svg-YNqBklPbk1tRWyNO.png" alt="Colas Rail">
+        </div>
+        <div class="client-logo-box">
+          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=53,fit=crop/YleW99z2ggsEE9o8/alstom_logo.svg-AE0PkNP9W4hgy1vb.png" alt="Alstom">
+        </div>
+        <div class="client-logo-box">
+          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=56,fit=crop/YleW99z2ggsEE9o8/images-2-YKb3kXlqresyaW8l.png" alt="Client">
+        </div>
+        <div class="client-logo-box">
+          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=76,fit=crop/YleW99z2ggsEE9o8/7457c5a1129a0451cafd2c8156e91b3fcfa4cd16-YD0lkqEL8BclR3Kb.png" alt="Client">
+        </div>
+      </div>
+      <div class="standards-label">Normes maîtrisées</div>
+      <ul class="standards-list">
+        <li>EN 50126 — Fiabilité &amp; sécurité RAMS</li>
+        <li>EN 50128 — Logiciels systèmes ferroviaires</li>
+        <li>EN 50129 — Systèmes électroniques sécurité</li>
+        <li>CENELEC — Normalisation électrotechnique</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
