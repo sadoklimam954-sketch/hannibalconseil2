@@ -14,7 +14,7 @@
   --bg:        #111a15;
   --dark:      #0c1410;
   --mid:       #c0d4c8;
-  --muted:     #8aab92;
+  --muted:     #c8dece;
   --border:    #1e3028;
   --text:      #e0ede4;
   --nav-h:     70px;
@@ -218,17 +218,6 @@ nav.sticky .burger span, nav.opaque .burger span { background:var(--white); }
 .link-arrow span { font-size:15px; transition:transform .2s; }
 .link-arrow:hover span { transform:translateX(4px); }
 
-/* ── BOUTON WHATSAPP ── */
-.whatsapp-btn {
-  position:fixed; bottom:2rem; right:2rem; z-index:300;
-  width:54px; height:54px;
-  background:#25D366; border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  box-shadow:0 4px 22px rgba(37,211,102,.42);
-  transition:transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
-}
-.whatsapp-btn:hover { transform:scale(1.12); box-shadow:0 8px 32px rgba(37,211,102,.55); }
-.whatsapp-btn svg { width:28px; height:28px; }
 
 /* ══════════════════════════════════════════
    FOOTER COMMUN
@@ -323,5 +312,4 @@ footer { background:var(--dark); border-top:1px solid var(--border); }
   .footer-main { padding:2.5rem 1.2rem 1.2rem; }
   .footer-inner { grid-template-columns:1fr; gap:2rem; }
   .footer-legal { flex-direction:column; gap:.6rem; }
-  .whatsapp-btn { bottom:1.5rem; right:1.5rem; }
 }

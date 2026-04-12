@@ -65,7 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .galerie-3col {
   display: grid;
-  grid-template-columns: 1fr 1.7fr 1fr;
+  grid-template-columns: 1.7fr 1fr;
   gap: 2.5rem;
   align-items: start;
   max-width: 1280px; margin: 0 auto;
@@ -113,7 +113,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .client-logo-box {
   border: 1px solid var(--border); border-radius: 8px;
-  padding: 10px 16px; background: var(--bg);
+  padding: 10px 16px; background: var(--white);
   display: flex; align-items: center; justify-content: center;
   height: 54px; transition: border-color .2s;
 }
@@ -292,44 +292,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="galerie-section">
   <div class="galerie-section-header reveal">
     <div class="section-tag" style="justify-content:center">Terrain &amp; réseau</div>
-    <h2>Nos implantations, réalisations &amp; clients</h2>
+    <h2>Réalisations &amp; clients</h2>
   </div>
 
   <div class="galerie-3col">
-
-    <!-- ── GAUCHE : carte France ── -->
-    <div class="reveal">
-      <div class="gcol-title">Nos implantations</div>
-      <div class="france-map-wrap">
-        <svg viewBox="0 0 190 215" xmlns="http://www.w3.org/2000/svg" aria-label="Carte France">
-          <!-- Contour France simplifié -->
-          <path d="M144,12 L168,45 L176,85 L165,115 L171,152 L148,186 L108,200 L68,194 L40,172 L25,142 L12,110 L14,72 L30,44 L62,24 L92,12 Z"
-            fill="#eef7f2" stroke="#c8e6d8" stroke-width="1.5"/>
-          <!-- Points villes -->
-          <!-- Paris -->
-          <circle cx="118" cy="72" r="5" fill="#e03030"/>
-          <text x="124" y="70" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Paris</text>
-          <!-- Lyon -->
-          <circle cx="148" cy="128" r="5" fill="#e03030"/>
-          <text x="154" y="126" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Lyon</text>
-          <!-- Marseille -->
-          <circle cx="148" cy="180" r="5" fill="#e03030"/>
-          <text x="115" y="188" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Marseille</text>
-          <!-- Bordeaux -->
-          <circle cx="63" cy="152" r="5" fill="#e03030"/>
-          <text x="18" y="150" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Bordeaux</text>
-          <!-- Toulouse -->
-          <circle cx="98" cy="174" r="5" fill="#e03030"/>
-          <text x="104" y="172" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Toulouse</text>
-          <!-- Angers -->
-          <circle cx="68" cy="95" r="5" fill="#e03030"/>
-          <text x="74" y="93" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Angers</text>
-          <!-- Brest -->
-          <circle cx="22" cy="73" r="5" fill="#e03030"/>
-          <text x="28" y="71" font-size="9" fill="#333" font-family="DM Sans,sans-serif" font-weight="600">Brest</text>
-        </svg>
-      </div>
-    </div>
 
     <!-- ── CENTRE : grille photos ── -->
     <div class="reveal d1">
@@ -382,13 +348,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=194,h=76,fit=crop/YleW99z2ggsEE9o8/7457c5a1129a0451cafd2c8156e91b3fcfa4cd16-YD0lkqEL8BclR3Kb.png" alt="Client">
         </div>
       </div>
-      <div class="standards-label">Normes maîtrisées</div>
-      <ul class="standards-list">
-        <li>EN 50126 — Fiabilité &amp; sécurité RAMS</li>
-        <li>EN 50128 — Logiciels systèmes ferroviaires</li>
-        <li>EN 50129 — Systèmes électroniques sécurité</li>
-        <li>CENELEC — Normalisation électrotechnique</li>
-      </ul>
     </div>
 
   </div>
@@ -466,13 +425,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
-<!-- BOUTON WHATSAPP -->
-<a href="contact.html" class="whatsapp-btn" aria-label="Nous contacter">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.118 1.52 5.846L0 24l6.335-1.652C8.025 23.292 9.97 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.848 0-3.592-.537-5.07-1.466l-.364-.216-3.758.98.998-3.672-.237-.376C2.645 15.397 2.182 13.748 2.182 12c0-5.419 4.399-9.818 9.818-9.818S21.818 6.581 21.818 12 17.419 21.818 12 21.818z"/>
-  </svg>
-</a>
 
 <script>
 const bar = document.getElementById('scroll-progress');
