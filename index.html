@@ -31,7 +31,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(160deg, rgba(8,22,14,.9) 0%, rgba(13,28,18,.78) 55%, rgba(26,107,58,.18) 100%);
+  background: linear-gradient(160deg, rgba(8,22,14,.9) 0%, rgba(13,28,18,.78) 55%, rgba(109,217,154,.12) 100%);
 }
 .hero-content {
   position: relative; z-index: 2;
@@ -96,14 +96,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* ── CHIFFRES CLÉS ── */
 .stats {
   display: grid; grid-template-columns: repeat(3, 1fr);
-  border-bottom: 1px solid var(--border); background: var(--white);
+  border-bottom: 1px solid var(--border); background: var(--bg);
 }
 .stat-item {
   padding: 3.5rem 4.5rem; display: flex; flex-direction: column; gap: .6rem;
   border-right: 1px solid var(--border);
 }
 .stat-item:last-child { border-right: none; }
-.stat-num { font-family: 'DM Serif Display', serif; font-size: 4rem; color: var(--dark); line-height: 1; }
+.stat-num { font-family: 'DM Serif Display', serif; font-size: 4rem; color: var(--white); line-height: 1; }
 .stat-num span { color: var(--green-acc); font-size: 2.2rem; }
 .stat-label { font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
 
@@ -122,20 +122,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .pres-content h2 {
   font-family: 'DM Serif Display', serif;
   font-size: clamp(1.8rem, 2.6vw, 2.8rem);
-  color: var(--dark); line-height: 1.15;
+  color: var(--white); line-height: 1.15;
   margin-bottom: 1.5rem; letter-spacing: -.02em;
 }
 .pres-content p { color: var(--muted); font-size: 15px; font-weight: 300; line-height: 2; margin-bottom: 1.2rem; }
 .pres-content p:last-of-type { margin-bottom: 2rem; }
 
 /* ── SERVICES — 3 CARTES ── */
-.services { padding: 7rem 5rem; background: var(--white); }
+.services { padding: 7rem 5rem; background: var(--dark); }
 .services-header { text-align: center; margin-bottom: 4.5rem; }
 .services-header .section-tag { justify-content: center; }
 .services-header h2 {
   font-family: 'DM Serif Display', serif;
   font-size: clamp(2rem, 3.2vw, 3.2rem);
-  color: var(--dark); letter-spacing: -.025em; margin-bottom: .6rem;
+  color: var(--white); letter-spacing: -.025em; margin-bottom: .6rem;
 }
 .services-sub {
   color: var(--muted); font-size: 15px; max-width: 480px;
@@ -159,18 +159,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   transition: transform .4s ease;
 }
 .service-card:hover {
-  border-color: rgba(26,107,58,.22);
-  box-shadow: 0 18px 56px rgba(26,107,58,.09);
+  border-color: rgba(109,217,154,.22);
+  box-shadow: 0 18px 56px rgba(109,217,154,.07);
   transform: translateY(-6px);
 }
 .service-card:hover::before { transform: scaleX(1); }
 .card-num {
   font-family: 'DM Serif Display', serif;
-  font-size: 4.5rem; color: rgba(26,107,58,.06); line-height: 1; margin-bottom: .4rem;
+  font-size: 4.5rem; color: rgba(109,217,154,.1); line-height: 1; margin-bottom: .4rem;
 }
 .card-title {
   font-family: 'DM Serif Display', serif;
-  font-size: 1.55rem; color: var(--dark); margin-bottom: 1.6rem; line-height: 1.2;
+  font-size: 1.55rem; color: var(--white); margin-bottom: 1.6rem; line-height: 1.2;
 }
 .card-list { list-style: none; flex: 1; margin-bottom: 2.2rem; }
 .card-list li {
@@ -203,7 +203,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   content: ''; position: absolute;
   top: -200px; right: -150px;
   width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(26,107,58,.2) 0%, transparent 68%);
+  background: radial-gradient(circle, rgba(109,217,154,.15) 0%, transparent 68%);
   pointer-events: none;
 }
 .processus .section-tag { color: rgba(109,217,154,.6); }
@@ -330,9 +330,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <rect x="42" y="45.5" width="8" height="2.5" rx="1" fill="#9a9896"/>
       <rect x="2" y="12" width="50" height="3.5" rx="1" fill="#c8c6c2"/>
       <rect x="2" y="38" width="50" height="3.5" rx="1" fill="#c8c6c2"/>
-      <rect x="14" y="7" width="7" height="40" rx="2" fill="#1a6b3a"/>
-      <rect x="33" y="7" width="7" height="40" rx="2" fill="#1a6b3a"/>
-      <rect x="14" y="22" width="26" height="10" rx="1.5" fill="#1a6b3a"/>
+      <rect x="14" y="7" width="7" height="40" rx="2" fill="#6dd99a"/>
+      <rect x="33" y="7" width="7" height="40" rx="2" fill="#6dd99a"/>
+      <rect x="14" y="22" width="26" height="10" rx="1.5" fill="#6dd99a"/>
       <rect x="14" y="7" width="2.5" height="40" rx="1" fill="white" opacity="0.18"/>
       <rect x="33" y="7" width="2.5" height="40" rx="1" fill="white" opacity="0.18"/>
     </svg>
@@ -515,9 +515,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <rect x="42" y="45.5" width="8" height="2.5" rx="1" fill="#9a9896"/>
             <rect x="2" y="12" width="50" height="3.5" rx="1" fill="#c8c6c2"/>
             <rect x="2" y="38" width="50" height="3.5" rx="1" fill="#c8c6c2"/>
-            <rect x="14" y="7" width="7" height="40" rx="2" fill="#1a6b3a"/>
-            <rect x="33" y="7" width="7" height="40" rx="2" fill="#1a6b3a"/>
-            <rect x="14" y="22" width="26" height="10" rx="1.5" fill="#1a6b3a"/>
+            <rect x="14" y="7" width="7" height="40" rx="2" fill="#6dd99a"/>
+            <rect x="33" y="7" width="7" height="40" rx="2" fill="#6dd99a"/>
+            <rect x="14" y="22" width="26" height="10" rx="1.5" fill="#6dd99a"/>
           </svg>
           <span class="footer-name">Hannibal <em>Conseil</em></span>
         </div>
